@@ -16298,8 +16298,8 @@
   "RootNamespace": "NVH0736",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Admin\\NetCore\\NVH0736\\Views\\Student\\create.cshtml",
-      "TargetPath": "Views\\Student\\create.cshtml",
+      "FilePath": "c:\\Users\\Admin\\NetCore\\NVH0736\\Views\\Student\\Create.cshtml",
+      "TargetPath": "Views\\Student\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
