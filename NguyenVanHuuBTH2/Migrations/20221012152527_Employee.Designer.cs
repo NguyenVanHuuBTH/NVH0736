@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace NguyenVanHuuBTH2HoangKimHuanBTH2.Migrations
+namespace NguyenVanHuuBTH2.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20221012152527_Employee")]

@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace NguyenVanHuuBTH2HoangKimHuanBTH2.Migrations
+namespace NguyenVanHuuBTH2.Migrations
 {
     public partial class Employee : Migration
     {
