@@ -1,8 +1,7 @@
 using System.Data;
 using OfficeOpenXml;
 namespace NGUYENVANHUUBTH2.Models.Process
-{
-
+{    
     public class ExcelProcess
     {
         public DataTable ExcelToDataTable(string strPath)
@@ -10,48 +9,55 @@ namespace NGUYENVANHUUBTH2.Models.Process
             FileInfo fi = new FileInfo(strPath);
             ExcelPackage excelPackage = new ExcelPackage(fi);
             DataTable dt = new DataTable();
-            ExcelWorksheet worksheet = excelPackage.workbook.worksheet(0);
-            // check if the worksheet is completely emply
-            if (worksheet.Dimension == null)
+            ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[0];
 
+            //check if the worksheet is completely empty
+            if(worksheet.Dimension == null)
             {
-                return dt;       
+                return dt;
             }
-            // create a list to hold the column names
-            List<string> DbMetaDataColumnNames = new List<string>();
-            // needed to keep track of emply column headers
-            int currentColumn =1;
-            // loop all column in the sheet and them to the datable
-            foreach (war cell in worksheet.Cells[1, 1, 1,  worksheet.Dimension.End.Column])
+            //create a list to hold the collum names
+            List<string> columnNames = new List<string>();
+            //needed to keep track of empty column headers
+            int currentColumn = 1;
+            // loop all colums in the sheet and add them to the database
+            foreach (var cell in worksheet.Cells[1,1,1, worksheet.Dimension.End.Column])
             {
                 string columnName = cell.Text.Trim();
-                // check if the previous header was emply and add it if was
-                if (cell.Start.Column != currentColumn)
+                //check if the previous header was empty and add it if it was
+                if(cell.Start.Column != currentColumn)
                 {
-                    DbMetaDataColumnNames.Add("Header_" + currentColumn);
+                    columnNames.Add("Header_" + currentColumn);
                     dt.Columns.Add("Header_" + currentColumn);
-                    currentColumn++;           
+                    currentColumn++;
                 }
-                // add the column name to the list to count the duplicates
-                columnName.Add(columnName);
-                //count the duplicate column names and make them unique to avoid the except
-                //A column named 'Name' already belongs to this DataTable
-                int occurrences =  DbMetaDataColumnNames.Count(x => x.Equals(clumnName));
-                if (occurrences >)
+                //add the column name to the list to count the duplicates
+                columnNames.Add(columnName);
+                //cout the duplicate column names and make them unique to advoid the exception
+                int occurrences = columnNames.Count(x => x.Equals(columnName));
+                if(occurrences > 1)
                 {
                     columnName = columnName + "_" + occurrences;
                 }
+
                 //add the column to the datatable
                 dt.Columns.Add(columnName);
-                occurrentColumn++;
+                currentColumn++;
             }
-            //
-            for (int 1 = 2; 1< worksheet.Dimension.End.Row; int++)
-            {
-                war row = workssheet.Cells[1, 1, 1, workssheet.Dimension.End.Column];
-                DataRow newRow = dt.NewRow();
 
+            //start adding the contents of the excel file to datatable
+            for(int i=2; i<= worksheet.Dimension.End.Row; i++)
+            {
+                var row = worksheet.Cells[1, 1, 1, worksheet.Dimension.End.Column];
+                DataRow newRow = dt.NewRow();
+                // loop all cells in the row
+                foreach(var cell in row)
+                {
+                    newRow[cell.Start.Column - 1] = cell.Text;    
+                }
+                dt.Rows.Add(newRow);
             }
+            return dt;
         }
     }
 }

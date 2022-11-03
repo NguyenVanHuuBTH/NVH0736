@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using NguyenVanHuuBTH2.Models;
+using NGUYENVANHUUBTH2.Models;
 
 namespace NguyenVanHuuBTH2.Controllers;
 

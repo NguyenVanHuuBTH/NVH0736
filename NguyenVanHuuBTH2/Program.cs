@@ -1,9 +1,9 @@
-using NguyenVanHuuBTH2.Data;
+using NGUYENVANHUUBTH2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbcontext") ?? throw new InvalidOperationException("Connection string 'ApplicationDbcontext' not found.")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbContext") ?? throw new InvalidOperationException("Connection string 'ApplicationDbcontext' not found.")));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

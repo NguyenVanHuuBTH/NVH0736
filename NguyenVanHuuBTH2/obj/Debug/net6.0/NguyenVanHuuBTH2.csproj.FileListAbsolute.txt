@@ -282,3 +282,7 @@ C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\obj\Debug\net6.0\refint\NguyenVa
 C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\obj\Debug\net6.0\NguyenVanHuuBTH2.pdb
 C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\obj\Debug\net6.0\NguyenVanHuuBTH2.genruntimeconfig.cache
 C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\obj\Debug\net6.0\ref\NguyenVanHuuBTH2.dll
+C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\bin\Debug\net6.0\EPPlus.dll
+C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\bin\Debug\net6.0\EPPlus.Interfaces.dll
+C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+C:\Users\Admin\NetCore\NVH0736\NguyenVanHuuBTH2\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll

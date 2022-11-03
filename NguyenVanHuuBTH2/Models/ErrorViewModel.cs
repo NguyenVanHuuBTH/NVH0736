@@ -1,4 +1,4 @@
-namespace NguyenVanHuuBTH2.Models;
+namespace NGUYENVANHUUBTH2.Models;
 
 public class ErrorViewModel
 {

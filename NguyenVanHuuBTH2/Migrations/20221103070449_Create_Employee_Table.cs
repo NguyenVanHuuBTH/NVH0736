@@ -1,13 +1,18 @@
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace NguyenVanHuuBTH2.Migrations
+namespace NGUYENVANHUUBTH2.Migrations
 {
-    public partial class Employee : Migration
+    public partial class Create_Employee_Table : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "Birthday",
+                table: "Person",
+                newName: "namsinh");
+
             migrationBuilder.CreateTable(
                 name: "Employee",
                 columns: table => new
@@ -27,6 +32,11 @@ namespace NguyenVanHuuBTH2.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Employee");
+
+            migrationBuilder.RenameColumn(
+                name: "namsinh",
+                table: "Person",
+                newName: "Birthday");
         }
     }
 }

@@ -1,6 +1,6 @@
 using System.Data;
 using System.ComponentModel.DataAnnotations;
-namespace NguyenVanHuuBTH2.Models{
+namespace NGUYENVANHUUBTH2.Models{
     public class Person
     {
         public string? ID {get; set;}

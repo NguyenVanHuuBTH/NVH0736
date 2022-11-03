@@ -1,7 +1,7 @@
 using System.Reflection.Metadata.Ecma335;
 using System.Globalization;
 using System.Data;
-namespace NguyenVanHuuBTH2.Models{
+namespace NGUYENVANHUUBTH2.Models{
     public class Employee
     {
         public string? ID {get; set;}

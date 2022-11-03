@@ -1,5 +1,5 @@
 using System.Data;
-namespace NguyenVanHuuBTH2.Models{
+namespace NGUYENVANHUUBTH2.Models{
     public class Student
     {
         public string? ID {get; set;}
